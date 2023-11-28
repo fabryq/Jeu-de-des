@@ -1,0 +1,150 @@
+:root {
+    --rouge: rgba(221, 15, 15, 0.7);
+}
+
+*{
+    font-family: 'Lato', sans-serif; 
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 1rem;
+    
+    color: #c3c3c3;
+    background: rgb(128,96,22);
+    background: radial-gradient(circle, rgba(128,96,22,1) 0%, rgba(166,146,87,1) 35%, rgba(115,90,8,1) 100%);
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+h1{
+    font-weight: 300;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+    
+i {
+    color: var(--rouge);
+}
+
+.row {
+    padding: 0;
+    margin: 0;
+}
+
+.container-game{
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+.player-1{
+    background-color: whitesmoke;
+    padding: 0;  
+    margin: 0;  
+    height: calc(100vh - 30px);
+    text-align: center;
+}
+
+.player-2{
+    background-color: white;
+    padding: 0;   
+    margin: 0;   
+    height: calc(100vh - 30px);
+    text-align: center;
+}
+
+.player-top, .player-bottom {
+    height: calc(50vh - 30px);
+}
+.current-score {
+    width: 150px;
+    height: 100px;
+    background-color: var(--rouge);
+}
+.scoreRound{
+    font-size: 2rem;
+    
+    bottom: 0;
+}
+
+.scoreGlobal {
+    font-size: 5rem;
+    color: var(--rouge);
+    font-weight: 100;
+}
+
+
+.interface{
+margin: 0;
+padding: 0;
+background: linear-gradient(90deg, whitesmoke 50%, white 50%);
+}
+
+.interface-top, .interface-bottom {
+    height: calc(50vh - 30px);
+}
+
+.btn-new{
+  margin-top: 20px;
+}
+
+#dice{
+    width: 100px;
+   height: 100px;
+    
+    background-color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    margin: 0;
+}
+
+.btn-roll, .btn-hold {
+    font-family: 'Lato', sans-serif; 
+    margin: 12px; 
+    color: #c3c3c3;
+}
+
+.btn-game {
+    background-color: rgba(255, 255, 255, 0.24);
+    border: 0;
+    box-shadow: none;
+    font-family: 'Lato', sans-serif; 
+    color: #c3c3c3;
+    font-size: 1.1rem;
+}
+.point-dice{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+    
+    margin: 0;
+    padding: 0;
+    
+}
+.point-row{
+    
+   
+    height: 33%;
+    margin: 0;
+    
+    
+}
+
+.bi-circle-fill{
+    color: var(--rouge);
+    
+}
+
+.tampon{
+    color: white;
+    
+}
