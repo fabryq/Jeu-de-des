@@ -23,8 +23,7 @@ body{
     padding-bottom: 15px;
     padding-left: 15px;
     padding-right: 15px;
-    width: 100vw;
-    height: 100vh;
+    
 }
 
 h1{
@@ -243,6 +242,51 @@ i {
         100% { opacity: 1; font-size: 6em; }
       }
 }
+@media (min-width:480px) and (orientation: landscape) {
+    /* Styles spécifiques au mode paysage */
+    .current-score {
+        width: 150px;
+        height: 100px;
+    }
+    .scoreRound{
+        font-size: 2rem;
+    }
+    
+    .scoreGlobal {
+        font-size: 3rem;
+    }
+    #player1, #player2{
+        font-size: 2rem;
+    }
+   
+    #dice{
+        width: 80px;
+        height: 80px;
+    }
+    
+    .bi-circle-fill{
+        width: 12px;
+        height: 12px;
+    }
+    .btn-game {
+        font-size: 1rem;
+    }
+
+    #winner{
+        font-weight: 400;
+        color: var(--rouge);
+        animation: fadeandzoom 5s;
+        text-shadow: 1px 1px 2px var(--rouge), 0 0 1em blue, 0 0 0.2em blue; 
+        font-size: 8em;
+    }
+
+    @keyframes fadeandzoom {
+        0% { opacity: 0; font-size: 0em; }
+        100% { opacity: 1; font-size: 8em; }
+      }
+}
+
+    
 
 
 @media (min-width:880px) {
