@@ -1,10 +1,16 @@
+/***** Général *****/
 :root {
     --rouge: rgba(221, 15, 15, 0.7);
 }
 
-*{
+*{  
     font-family: 'Lato', sans-serif; 
     box-sizing: border-box;
+}
+
+html{
+    font-family: 'Lato', sans-serif; 
+    font-size: 1rem;  
 }
 
 body{
@@ -12,21 +18,20 @@ body{
     
     color: #c3c3c3;
     background: rgb(128,96,22);
-    background: radial-gradient(circle, rgba(128,96,22,1) 0%, rgba(166,146,87,1) 35%, rgba(115,90,8,1) 100%);
+    background: linear-gradient(120deg, rgba(166,146,87,1) 15%, rgba(115,90,8,1) 85%);
     padding-top: 10px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    height: 100%;
-    width: 100%;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100vw;
+    height: 100vh;
 }
 
 h1{
-    font-weight: 300;
+    font-weight: 200;
 }
 
 h3 {
-    font-size: 1.2rem;
     font-weight: 300;
 }
     
@@ -38,43 +43,47 @@ i {
     padding: 0;
     margin: 0;
 }
+/***** End Général *****/
 
+/* plateform */
 .container-game{
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     box-sizing: border-box;
     width: 100%;
     height: 100%;
+    padding: 0px;
 }
 
+/***** Interface joueur *****/
 .player-1{
     background-color: whitesmoke;
-    padding: 0;  
-    margin: 0;  
-    height: calc(100vh - 30px);
+    padding: 0;     
+    height: calc(100vh - 25px);
     text-align: center;
 }
 
 .player-2{
     background-color: white;
-    padding: 0;   
-    margin: 0;   
-    height: calc(100vh - 30px);
+    padding: 0;        
+    height: calc(100vh - 25px);
     text-align: center;
 }
 
 .player-top, .player-bottom {
-    height: calc(50vh - 30px);
+    height: calc(50vh - 25px);
+    
 }
+/* Score */
 .current-score {
-    width: 150px;
+    width: 80px;
     height: 100px;
     background-color: var(--rouge);
 }
 .scoreRound{
-    font-size: 2rem;
-    
+    font-size: 2.5rem;    
     bottom: 0;
+    font-weight: 300;
 }
 
 .scoreGlobal {
@@ -82,35 +91,70 @@ i {
     color: var(--rouge);
     font-weight: 100;
 }
+/***** End Interface joueur *****/
 
 
+/***** Interface central *****/
 .interface{
-margin: 0;
-padding: 0;
-background: linear-gradient(90deg, whitesmoke 50%, white 50%);
-}
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(90deg, whitesmoke 50%, white 50%);
+    }
+    
+    .interface-top, .interface-bottom {
+        height: calc(50vh - 25px);
+    }
+    
+    
+    
+    #dice{
+        width: 80px;
+        height: 80px;    
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+        margin: 0;
+    }
+    
+    .bi-circle-fill{            /* util aussi pour le joueur actif */
+        color: var(--rouge);
+        width: 9px;
+        height: 9px;
+    }
 
-.interface-top, .interface-bottom {
-    height: calc(50vh - 30px);
+    .point-dice{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+         
+         margin: 0;
+         padding: 0;
+         
+     }
+     .point-row{
+         height: 33.333%;
+         margin: 0;
+     
+     }
+     
+     
+     /* Point du dé ne devant jamais apparaitre */
+     .tampon{                
+         color: white;
+         
+     }
+/***** End Interface central *****/
+
+
+/***** Bouton *****/
+.btn-roll, .btn-hold {
+    font-family: 'Lato', sans-serif; 
+    margin: 0;
+    padding: 0;
+    color: rgb(194, 194, 194)
 }
 
 .btn-new{
-  margin-top: 20px;
-}
-
-#dice{
-    width: 100px;
-   height: 100px;
-    
-    background-color: white;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-    margin: 0;
-}
-
-.btn-roll, .btn-hold {
-    font-family: 'Lato', sans-serif; 
-    margin: 12px; 
-    color: #c3c3c3;
+    margin-top: 20px;
 }
 
 .btn-game {
@@ -119,32 +163,173 @@ background: linear-gradient(90deg, whitesmoke 50%, white 50%);
     box-shadow: none;
     font-family: 'Lato', sans-serif; 
     color: #c3c3c3;
-    font-size: 1.1rem;
+    font-size: 0.8rem;
 }
-.point-dice{
-   display: flex;
-   align-items: center;
-   justify-content: center;
-    
-    margin: 0;
-    padding: 0;
-    
+
+.container-btn{
+    height: 100px;
 }
-.point-row{
-    
-   
-    height: 33%;
-    margin: 0;
+/***** End Bouton *****/
+
+
+
+
+/***** Victoire *****/
+.container-winner{
+    position: absolute;
+    z-index: 100;
+    top: 50%;
     
     
 }
 
-.bi-circle-fill{
+@keyframes fadeandzoom {
+    0% { opacity: 0; transform: scale(0); }
+    100% { opacity: 1; font-size: 3em; }
+  }
+
+  #winner{
+    font-weight: 400;
     color: var(--rouge);
+    animation: fadeandzoom 5s;
+    text-shadow: 1px 1px 2px var(--rouge), 0 0 1em blue, 0 0 0.2em blue; 
+    font-size: 3em; 
+    /* garder la taille de l'animation */
+}
+/***** End Victoire *****/
+
+
+
+/***** MediaQuery pour du mobile-first *****/
+@media (min-width:480px) {
+    .current-score {
+        width: 150px;
+        height: 100px;
+    }
+    .scoreRound{
+        font-size: 2rem;
+    }
     
+    .scoreGlobal {
+        font-size: 6rem;
+    }
+    #player1, #player2{
+        font-size: 2.5rem;
+    }
+   
+    #dice{
+        width: 100px;
+        height: 100px;
+    }
+    
+    .bi-circle-fill{
+        width: 14px;
+        height: 14px;
+    }
+    .btn-game {
+        font-size: 1.5rem;
+    }
+
+    #winner{
+        font-weight: 400;
+        color: var(--rouge);
+        animation: fadeandzoom 5s;
+        text-shadow: 1px 1px 2px var(--rouge), 0 0 1em blue, 0 0 0.2em blue; 
+        font-size: 6em;
+    }
+
+    @keyframes fadeandzoom {
+        0% { opacity: 0; font-size: 0em; }
+        100% { opacity: 1; font-size: 6em; }
+      }
 }
 
-.tampon{
-    color: white;
+
+@media (min-width:880px) {
+    .current-score {
+        width: 200px;
+        height: 150px;
+    }
+    .scoreRound{
+        font-size: 2.5rem;
+    }
     
+    .scoreGlobal {
+        font-size: 6rem;
+    }
+    #player1, #player2{
+        font-size: 2.5rem;
+    }
+   
+    #dice{
+        width: 100px;
+        height: 100px;
+    }
+    
+    .bi-circle-fill{
+        width: 14px;
+        height: 14px;
+    }
+    .btn-game {
+        font-size: 1.5rem;
+    }
+
+    #winner{
+        font-weight: 400;
+        color: var(--rouge);
+        animation: fadeandzoom 5s;
+        text-shadow: 1px 1px 2px var(--rouge), 0 0 1em blue, 0 0 0.2em blue; 
+        font-size: 8em;
+    }
+
+    @keyframes fadeandzoom {
+        0% { opacity: 0; font-size: 0em; }
+        100% { opacity: 1; font-size: 8em; }
+      }
 }
+
+@media (min-width:1440px) {
+    .current-score {
+        width: 250px;
+        height: 200px;
+    }
+    .scoreRound{
+        font-size: 3rem;
+    }
+    
+    .scoreGlobal {
+        font-size: 8rem;
+    }
+    #player1, #player2{
+        font-size: 3rem;
+    }
+   
+    #dice{
+        width: 200px;
+        height: 200px;
+    }
+    
+    .bi-circle-fill{
+        width: 16px;
+        height: 16px;
+    }
+    .btn-game {
+        font-size: 2rem;
+    }
+
+    #winner{
+        font-weight: 400;
+        color: var(--rouge);
+        animation: fadeandzoom 5s;
+        text-shadow: 1px 1px 2px var(--rouge), 0 0 1em blue, 0 0 0.2em blue; 
+        font-size: 10em;
+    }
+
+    @keyframes fadeandzoom {
+        0% { opacity: 0; font-size: 0em; }
+        100% { opacity: 1; font-size: 10em; }
+      }
+}
+/***** End MediaQuery *****/
+
+
