@@ -2,7 +2,7 @@
 
 window.onload = function() {
   alert("Chaque joueur possède un score temporaire et un score global.\n \n À chaque tour, le joueur a son ROUND initialisé à 0 et peut lancer un dé autant de fois qu'il le souhaite.\n\n Le résultat d’un lancer est ajouté au ROUND.\n\n Lors de son tour, le joueur peut décider à tout moment de:\n\n - Cliquer sur l’option “Hold”, qui permet d’envoyer les points du ROUND vers le GLOBAL. Ce sera alors le tour de l’autre joueur.\n  - Lancer le dé. S’il obtient un 1, son score ROUND est perdu et c’est la fin de son tour./nLe premier joueur qui atteint les 100 points sur global gagne le jeu.\n\n Le Joueur 1 commence la partie! \n Bonne chance à vous!");
- }
+
 
 
   let btnNew = document.querySelector('#btn-new');
